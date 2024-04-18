@@ -91,45 +91,37 @@ escreva(h, ":", min, ":", seg);
 
 algoritmo númerosPerfeitos        // QUESTÃO 4) - LISTA 2
 
-inteiro: num, divisor, somaDivisores;
+inteiro: n, divisor, somaDivisores;
 
 faça {
+    // Lê o número
+    escreva("Digite um número inteiro positivo (caso queira encerrar o programa, digite um inteiro menor ou igual a 0): ");
+    leia(n);
+    
+    // Verifica se o número é menor ou igual a zero
+    se (n <= 0) {
+        escreva("Programa encerrado!");
+        interrompa; // Encerra o programa
+    }
 
-        // Leia o primeiro número
-        escreva("Digite um número inteiro positivo (caso queira encerrar o algoritmo, digite um inteiro menor ou igual a 0): ");
-        leia(num);
+    // Inicializa a soma dos divisores
+    somaDivisores = 1;
+    
+    // Encontra os divisores do número, pela técnica da "Fatoração por Tentativa", e soma-os
+    para divisor de 2 até sqrt(n) {
+        se (n % divisor == 0) {
+            somaDivisores += divisor;
+            se (divisor != (n / divisor)) {
+                somaDivisores += (n / divisor);
+            }
+        }
+    }
 
-        // Verifica se o número é menor ou igual a zero
-        se (num <= 0) {
-                escreva("Programa encerrado!");
-                interrompa; // Interrompe o loop e encerra o programa
-        }
-        
-        enquanto (num > 0) {
-        
-                // Inicialize a soma dos divisores
-                somaDivisores = 1;
-            
-                // Encontre os divisores do número, pela técnica da "Fatoração por Tentativa", e some-os
-                para divisor de 2 até sqrt(num) {
-                        se (num % divisor == 0) {
-                                somaDivisores += divisor;
-                                se (divisor != (num / divisor)) {
-                                        somaDivisores += (num / divisor);
-                                }
-                        }
-                }
-            
-                // Verifique se o número é perfeito
-                se (somaDivisores == num) {
-                        escreva(num, " é um número perfeito!");
-                } 
-                
-                senão {
-                        escreva(num, " NÃO é um número perfeito!");
-                }
-                
-                // Leia o próximo número
-                leia(num);
-        }
-}
+    // Verifica se o número é perfeito
+    se (somaDivisores == n) {
+        escreva(n, " é um número perfeito!");
+    } senão {
+        escreva(n, " NÃO é um número perfeito!");
+    }
+
+} enquanto (n > 0);
