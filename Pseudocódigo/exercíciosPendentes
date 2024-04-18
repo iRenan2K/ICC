@@ -90,11 +90,9 @@ escreva(h, ":", min, ":", seg);
 
 
 algoritmo númerosPerfeitos        // QUESTÃO 4) - LISTA 2
-
 inteiro: n, divisor, somaDivisores;
 
 faça {
-
     // Lê o número
     escreva("Digite um número inteiro positivo (caso queira encerrar o programa, digite um inteiro menor ou igual a 0): ");
     leia(n);
@@ -106,20 +104,21 @@ faça {
     }
 
     // Inicializa a soma dos divisores
-    somaDivisores = 1;
-    
-    // Encontra os divisores do número, pela técnica da "Fatoração por Tentativa", e soma-os
-    para divisor de 2 até sqrt(n) {
+    somaDivisores = 0;
+
+    // Encontra os divisores do número e soma-os
+    para divisor de 1 até sqrt(n) {
             se (n % divisor == 0) {
                     somaDivisores += divisor;
-                    se (divisor != (n / divisor)) {
-                            somaDivisores += (n / divisor);
+                    // Se divisor for diferente da raiz quadrada de n, soma também o quociente
+                    se (divisor != sqrt(n)) {
+                        somaDivisores += (n / divisor);
                     }
             }
     }
 
     // Verifica se o número é perfeito
-    se (somaDivisores == n) {
+    se (somaDivisores - n == n) {
             escreva(n, " é um número perfeito!");
     } 
     senão {
