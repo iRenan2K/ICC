@@ -77,12 +77,7 @@ ehRet = triangRetang(lado);
 
 // Responde se é verdadeiro ou falso que os lados fornecidos formam um triângulo retângulo
 escreva("Os lados fornecidos formam um triângulo retângulo? ", ehRet);
-        min -= 60;
-        h += 1;
-}        
-
-escreva(h, ":", min, ":", seg);
-
+    
 
 
 ================================================================================================================================================================================
