@@ -94,14 +94,15 @@ algoritmo númerosPerfeitos        // QUESTÃO 4) - LISTA 2
 inteiro: n, divisor, somaDivisores;
 
 faça {
+
     // Lê o número
     escreva("Digite um número inteiro positivo (caso queira encerrar o programa, digite um inteiro menor ou igual a 0): ");
     leia(n);
     
     // Verifica se o número é menor ou igual a zero
     se (n <= 0) {
-        escreva("Programa encerrado!");
-        interrompa; // Encerra o programa
+            escreva("Programa encerrado!");
+            interrompa; // Encerra o programa
     }
 
     // Inicializa a soma dos divisores
@@ -109,19 +110,20 @@ faça {
     
     // Encontra os divisores do número, pela técnica da "Fatoração por Tentativa", e soma-os
     para divisor de 2 até sqrt(n) {
-        se (n % divisor == 0) {
-            somaDivisores += divisor;
-            se (divisor != (n / divisor)) {
-                somaDivisores += (n / divisor);
+            se (n % divisor == 0) {
+                    somaDivisores += divisor;
+                    se (divisor != (n / divisor)) {
+                        somaDivisores += (n / divisor);
+                    }
             }
-        }
     }
 
     // Verifica se o número é perfeito
     se (somaDivisores == n) {
-        escreva(n, " é um número perfeito!");
-    } senão {
-        escreva(n, " NÃO é um número perfeito!");
+            escreva(n, " é um número perfeito!");
+    } 
+    senão {
+            escreva(n, " NÃO é um número perfeito!");
     }
 
 } enquanto (n > 0);
