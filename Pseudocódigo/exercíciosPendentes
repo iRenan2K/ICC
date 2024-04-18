@@ -120,16 +120,16 @@ faça {
                         }
                 }
             
-                    // Verifique se o número é perfeito
-                    se (somaDivisores == num) {
+                // Verifique se o número é perfeito
+                se (somaDivisores == num) {
                         escreva(num, " é um número perfeito!");
-                    } 
-        
-                    senão {
+                } 
+                
+                senão {
                         escreva(num, " NÃO é um número perfeito!");
-                    }
-                    
-                    // Leia o próximo número
-                    leia(num);
+                }
+                
+                // Leia o próximo número
+                leia(num);
         }
 }
