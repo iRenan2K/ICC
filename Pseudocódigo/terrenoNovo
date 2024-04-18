@@ -29,7 +29,7 @@ matriz: função alterarTerreno(matriz, x, y, sinal) {
                                         }
 
                                         senão se (sinal == "-" e matriz[p][q] > matriz[x][y]) {
-                                                 matriz[p][q] += operação;
+                                                matriz[p][q] += operação;
                                         } 
                                 }
                         }
