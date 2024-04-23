@@ -1,0 +1,44 @@
+================================================================================================================================================================================
+Escreva um programa que leia uma sequência de valores inteiros e imprima, para cada valor lido, uma mensagem que indica se ele é ou não um número perfeito. Um inteiro positivo 
+"n" é perfeito se é igual à soma dos divisores positivos de "n", diferentes de "n"
+
+Por exemplo: 6 é perfeito, pois 1+2+3 é igual a 6 (1, 2 e 3 são os divisores positivos de 6, diferentes de 6). A leitura deve terminar quando um valor menor ou igual a zero 
+for lido. (Você deve supor que a entrada consiste apenas de valores inteiros)
+================================================================================================================================================================================
+
+inteiro: n, divisor, somaDivisores;
+
+faça {
+    // Lê o número
+    escreva("Digite um número inteiro positivo (caso queira encerrar o programa, digite um inteiro menor ou igual a 0): ");
+    leia(n);
+    
+    // Verifica se o número é menor ou igual a zero
+    se (n <= 0) {
+            escreva("Programa encerrado!");
+            interrompa; // Encerra o programa
+    }
+
+    // Inicializa a soma dos divisores
+    somaDivisores = 0;
+
+    // Encontra os divisores do número e soma-os
+    para divisor de 1 até sqrt(n) {
+            se (n % divisor == 0) {
+                    somaDivisores += divisor;
+                    // Se divisor for diferente da raiz quadrada de n, soma também o quociente
+                    se (divisor != sqrt(n)) {
+                        somaDivisores += (n / divisor);
+                    }
+            }
+    }
+
+    // Verifica se o número é perfeito
+    se (somaDivisores - n == n) {
+            escreva(n, " é um número perfeito!");
+    } 
+    senão {
+            escreva(n, " NÃO é um número perfeito!");
+    }
+
+} enquanto (n > 0);
