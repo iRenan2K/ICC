@@ -86,6 +86,7 @@ escreva("Os lados fornecidos formam um triângulo retângulo? ", ehRetGlobal);
 
 
 algoritmo númerosPerfeitos        // QUESTÃO 4) - LISTA 2
+
 inteiro: n, divisor, somaDivisores;
 
 faça {
