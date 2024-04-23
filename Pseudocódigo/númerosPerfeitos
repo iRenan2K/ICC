@@ -19,7 +19,7 @@ faça {
             interrompa; // Encerra o programa
     }
 
-    // Inicializa a soma dos divisores (todo número é divisível por 1, então ele já entra na soma)
+    // Inicializa a soma dos divisores (todo número natural é divisível por 1, então ele já entra na soma)
     somaDivisores = 1;
 
     // Encontra os divisores do número e soma-os
