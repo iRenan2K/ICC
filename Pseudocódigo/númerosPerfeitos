@@ -19,11 +19,11 @@ faça {
             interrompa; // Encerra o programa
     }
 
-    // Inicializa a soma dos divisores
-    somaDivisores = 0;
+    // Inicializa a soma dos divisores (todo número é divisível por 1, então ele já entra na soma)
+    somaDivisores = 1;
 
     // Encontra os divisores do número e soma-os
-    para divisor de 1 até sqrt(n) {
+    para divisor de 2 até sqrt(n) {
             se (n % divisor == 0) {
                     somaDivisores += divisor;
                     // Se divisor for diferente da raiz quadrada de n, soma também o quociente
