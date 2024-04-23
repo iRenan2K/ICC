@@ -2,8 +2,6 @@
 Construa um algoritmo, em pseudocódigo, para gerar e imprimir "n" termos da série de Fibonacci (n >= 2 e deve ser informado pelo usuário)
 ====================================================================================================================================================================================
 
-algoritmo Fibonacci
-
 inteiro: n, antigo = 0, atual = 1, novo, i;
 
 escreva("Digite o número de termos desejados da série de Fibonacci: ");
