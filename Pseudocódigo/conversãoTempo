@@ -1,5 +1,5 @@
 ================================================================================================================================================================================
-Faça um programa que leia o tempo em segundos e escreva a mesma quantidade de tempo em horas, minutos e segundos
+Faça um pseudocódigo que leia o tempo em segundos e escreva a mesma quantidade de tempo em horas, minutos e segundos
 ================================================================================================================================================================================
 
 inteiro: s0, h, min, seg;
