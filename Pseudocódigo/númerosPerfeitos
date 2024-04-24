@@ -1,5 +1,5 @@
 ================================================================================================================================================================================
-Escreva uma função que leia uma sequência de valores inteiros e imprima, para cada valor lido, uma mensagem que indica se ele é ou não um número perfeito. Um inteiro positivo 
+Escreva um programa que leia uma sequência de valores inteiros e imprima, para cada valor lido, uma mensagem que indica se ele é ou não um número perfeito. Um inteiro positivo 
 "n" é perfeito se é igual à soma dos divisores positivos de "n", diferentes de "n"
 
 Por exemplo: 6 é perfeito, pois 1+2+3 é igual a 6 (1, 2 e 3 são os divisores positivos de 6, diferentes de 6). A leitura deve terminar quando um valor menor ou igual a zero 
