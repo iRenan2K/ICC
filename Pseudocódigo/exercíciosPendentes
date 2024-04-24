@@ -40,16 +40,15 @@ algoritmo Triângulo        // QUESTÃO 2) - LISTA 2
 
 // Verifica se os lados formam um triângulo retângulo
 lógico: função triangRetang(lado) {
-        lógico: ehRetLocal = F;
         se (lado[0]*lado[0] + lado[1]*lado[1] == lado[2]*lado[2]) {
-                ehRetLocal = V;
+                retorne V;
         }
 
-        retorne ehRetLocal;
+        retorne F;
 }
 
 inteiro: lado[3], i, j, temp;
-lógico: ehRetGlobal;
+lógico: ehRet;
 
 // Registra os lados no array "lado"
 para i de 0 até 2 {
@@ -74,10 +73,10 @@ para i de 0 até 2 {
 }
 
 // Chama a função para realizar a verificação e armazena a veracidade ou falsidade em ehRet
-ehRetGlobal = triangRetang(lado);
+ehRet = triangRetang(lado);
 
 // Responde se é verdadeiro ou falso que os lados fornecidos formam um triângulo retângulo
-escreva("Os lados fornecidos formam um triângulo retângulo? ", ehRetGlobal);
+escreva("Os lados fornecidos formam um triângulo retângulo? ", ehRet);
     
 
 
