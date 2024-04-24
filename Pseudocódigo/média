@@ -21,7 +21,7 @@ enquanto (V) {
 		continue; // Pula para a próxima iteração, sem computar a entrada inválida
 	} 
 
-	// Incrementa e adiciona o valor na soma total apenas se a entrada for válida
+	// Adiciona o valor na soma total e incrementa "i" apenas se a entrada for válida
 	somaValores += valor[i];
 	i++;
 }
